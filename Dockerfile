@@ -1,4 +1,4 @@
-from ruby:2.7.1-buster
+from ruby:2.5.8-buster
 
 WORKDIR /app
 COPY ./Gemfile /app/Gemfile

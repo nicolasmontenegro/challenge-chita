@@ -4,9 +4,11 @@ services:
     build: .
     environment:
       APP_ENV: production
+      API_URL: https://chita.cl/api/v1/pricing/simple_quote
+      API_KEY: UVG5jbLZxqVtsXX4nCJYKwtt
     volumes:
-      - ./src:/app/src
+      - ./:/app
     ports:
       - "127.0.0.1:3000:3000"
-    command: ruby /app/src/app.rb
-
+    command: bundle exec rackup -p 3000 --host 0.0.0.0
+    
